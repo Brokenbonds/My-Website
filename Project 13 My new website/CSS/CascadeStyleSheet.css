@@ -1,0 +1,529 @@
+*{
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior:smooth;
+    -moz-scroll-behavior:smooth;
+}
+
+body{
+    height: 50vw;
+    width: 100vw;
+    background-color: #FF7400;
+    margin: 0;
+    animation: fade 1s linear;
+
+}
+
+@keyframes fade{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+  
+
+/*==================
+   Navbar section
+==================== */
+
+
+/* Navbar background color and layout */
+.navBar{
+    background-color: #00C1C1;
+    overflow: hidden; /*this will give it auto height*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+
+}
+/* Styling the links */
+.navBar a,.navBar span{
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    color: White;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+}
+
+
+/* add color to hover over */
+.navBar a:hover,.navBar span:hover {
+    background-color: #00D200;
+    color: #006262;
+    
+}
+
+.navBar span{
+    cursor: pointer;
+}
+
+
+.CenterNav a{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.RightNav{
+    float: right;
+}
+
+.navBar i{
+    font-size: 1.5em;
+    padding: 9px 5px;
+}
+
+.navText{
+    padding: 14px 5px;
+}
+
+@media screen and (max-width: 600px){
+    .navBar a, .RightNav{
+        float: none;
+        display: block;
+        position: static;
+    }
+
+    .CenterNav a{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+}
+
+
+/*================
+Navbar section ends
+===================*/
+
+/* ================
+  rows and collums
+================== */
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col{
+    float: left;
+    width: 50%;
+    height: 50vw;
+    background-color: #FF7400;
+    z-index: -10;
+}
+
+.contentControl{
+    display: flex;
+    justify-content: center;
+}
+
+.AboutC1{
+    width: 40%;
+}
+.AboutC2{
+    width: 60%;
+}
+
+.rowHeight{
+    height: 6vw;
+}
+
+.rowGitHub{
+    position: relative;
+}
+
+/* ================
+rows and collums ENDS
+====================*/
+
+
+/* ================
+ Heroic Sectoin
+====================*/
+.Heroic{
+    background-color: #FF7400;
+}
+
+.quotedText{
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    top: -19vw;
+    left: 6vw;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-size: 1.75vw;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    z-index: 2;
+    animation: slideright 1s ease-out;
+}
+
+.HeroBgBox{
+    background-color: #D15F00;
+    margin-right: 0;
+    width: 42vw;
+    height: 40vw;
+    position: relative;
+    top: 0;
+    left: 8vw;
+    border-radius: 0 0 0 10px;
+    
+}
+.HeroicVid{
+    position: relative;
+    width: 60vw;
+    margin: 10vw 1vw;
+    border-radius: 10px;
+}
+.profileMe{
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    width: 18%;
+    top: 10vh;
+    right: 10vw;
+    
+}
+
+.titleCard1,.titleCard2{
+    width: 100px;
+    text-align: left;
+    font-size: 7vw;
+    color: white;
+    position: relative;
+    margin: 0;
+    bottom: 20vw;
+    left: 10vw;
+    font-family: 'Roboto', sans-serif;
+    animation: slideright 1s ease-out;
+
+}
+
+@keyframes slideright{
+    0%{transform:translate(-30%,0%);}
+    100%{transform:translate(0%,0%);}
+}
+
+.titleCard2{
+    font-size: 5vw;
+    bottom: 22.5vw;
+    left: 16vw;
+    font-family: 'Roboto:ital', sans-serif;
+
+}
+
+
+/* ================
+ Heroic Sectoin Ends
+====================*/
+
+/* ================
+ Aabout Sectoin 
+====================*/
+.About{
+    
+    background-color: #00D200;
+}
+
+span{
+    color: #a7e8e8;
+}
+
+.aboutImg{
+    width: 30vw;
+    margin: 12vw 8vw;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.AboutBg{
+
+    background-color: #008300;
+    margin-right: 0;
+    width: 70vw;
+    height: 38vw;
+    position: absolute;
+    top: 58vw;
+    right: 10vw;
+    border-radius: 10px;
+    z-index: 0;
+    
+}
+
+.AboutBg2{
+
+    background-color: #00A700;
+    margin-right: 0;
+    width: 20vw;
+    height: 15vw;
+    position: absolute;
+    top: 83vw;
+    right: 5vw;
+    border-radius: 10px;
+    z-index: 1;
+    
+}
+.About p{
+
+    text-align: left;
+    vertical-align: middle;
+    font-size: 1.75vw;
+    color: white;
+    margin-top: 12vw;
+    margin-right: 13vw;
+    font-family: 'Roboto', sans-serif;
+    z-index: 2;
+
+}
+
+a{
+    text-decoration: none;
+}
+p.AboutTitle,.center{
+    text-align: center;
+    padding-top: 2vw;
+    font-size: 4vw;
+    color: white;
+    margin: 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ================
+ Aabout Sectoin Ends
+====================*/
+
+/* ================
+Git Hub Style Sheet
+==================*/
+
+.GitHUB{
+    background-color:#D10000 ;
+}
+
+.GitImage{
+    width: 30vw;
+    margin: 5vw 5vw;
+    
+}
+
+.GitHUB p{
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 5vw;
+    font-size: 1.75vw;
+    color: white;
+    margin-top: 15vw;
+    margin-right: 13vw;
+    font-family: 'Roboto', sans-serif;
+    z-index: 3;
+
+}
+
+#gitHub .col{
+    height: 40vw;
+}
+
+.gitBubble1{
+    background-color: #FF0000;
+    border-radius: 50%;
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    z-index: 1;
+    margin-top: 5vw;
+}
+.gitBubble2{
+    background-color: #FF6262;
+    border-radius: 50%;
+    position: absolute;
+    height: 12vw;
+    width: 12vw;
+    z-index: 2;
+    margin-top: 5vw;
+    margin-left: 30vw;
+}
+.gitBubble3{
+    background-color: #A40000;
+    border-radius: 50%;
+    position: absolute;
+    height: 60vw;
+    width: 60vw;
+    z-index: 0;
+    margin-top: 20vw;
+    margin-left: 35vw;
+    
+}
+
+.gitHubHide{
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ================
+Footer Style Sheet
+==================*/
+footer{
+    background-color: #24ABAB;
+}
+
+.center{
+    font-size: 2vw;
+    padding-bottom: 2vh;
+}
+
+/* ================
+Contact Style Sheet
+==================*/
+#NameError,#EmailError,#PhoneError{
+    font-size: .75vw;
+    margin: 0;
+}
+
+.open-button{
+    background-color: #3adede;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: .8;
+    position: fixed;
+    bottom: 3vw;
+    right: 4vw;
+    width: 11vw;
+    height: 2.5vw;
+    font-size: 1vw;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+    z-index: 5;
+}
+
+
+.formContainer{
+    width: 15vw;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    right: 1vh;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    display: none;
+    border-radius: 14px 14px 0 0;
+}
+/* input[type=text] targets all text input sections of the contact form */
+input[type=text] {
+    width: 100%; /* Each input box covers the full width of the container */
+    padding: 1vw; /* Adds padding within the text box */
+    border: 1px solid #ccc; /* Setting a solid border and its color */
+    border-radius: 10px; /* Slightly rounds the corners of the text box border */
+    box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
+    margin-top: 1vw; /* Adds a margin to the top of the text box */
+    margin-bottom: 1vw; /* Adds a margin to the bottom of the text box */
+    resize: vertical; /* This allows the user to resize the text boxes vertically */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Hover effects for input boxes */
+input[type=text]:hover {
+    box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
+}
+
+/*When the input gets focused*/
+input[type=text]:focus{
+    background-color: #ddd;
+
+}
+
+/* Submit button */
+input[type=submit],.btn {
+    background-color: #00C1C1; /* Sets the background color of the submit button to black */
+    color: white; /* Sets the font color of the Submit button to white */
+    font-weight: bold; /* Makes the font of the submit button bold */
+    padding: 1vw 2vw; /* Adds padding to the submit button */
+    border: none; /* Removes the border from the submit button */
+    border-radius: 10px; /* Gives the submit button the same rounded corners as the text boxes */
+    cursor: pointer; /* Changes the cursor to pointer when over the submit button */
+    display: block; /* Allows the submit button to be centered */
+    margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
+    margin-right: auto;
+    margin-top: 1vh;
+    font-family: 'Roboto', sans-serif;
+}
+.btn{
+    background-color: #FF0000;
+}
+
+.btn:hover{
+    background-color: #A40000;
+}
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+    background-color: #006262; /* Turns the background of the submit button white when the user hovers over it */
+    color: white; /* Turns the font black when hovered over */
+}
+
+form {
+    border-radius: 10px 10px 0 0; /* Rounds the corners of the contact form */
+    background-color: #D15F00; 
+    padding: 2vh; /* Adds padding to the contact form */
+    font-family: 'Roboto', sans-serif;
+}
+
+/*=======
+Gallary
+=======*/
+
+.galCol{
+    height: 45vw;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.galCol h1{
+    text-align: center;
+    padding-top: 2vw;
+    font-size: 4vw;
+    color: white;
+    margin: 0 0;
+    font-family: 'Roboto', sans-serif;
+    top: 0;
+}
+
+#slideshow{
+    margin: 50px auto;
+    position: relative;
+    width: 50vw;
+    height: 27.1vw;
+    
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .4);
+}
+
+#slideshow > div{
+    position: absolute;
+}
+
+#slidshow > img{
+    width: 50%;
+    height: auto;
+
+}
+
+#resposive{
+    width: 100%;
+    height: auto;
+}
