@@ -504,6 +504,16 @@ Gallary
     top: 0;
 }
 
+.galCol2{
+    text-align: center;
+    padding-top: 2vw;
+    font-size: 4vw;
+    color: white;
+    margin: 0 0;
+    font-family: 'Roboto', sans-serif;
+    top: 0;
+}
+
 #slideshow{
     margin: 50px auto;
     position: relative;
