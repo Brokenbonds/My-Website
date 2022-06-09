@@ -1,4 +1,4 @@
-function validateForm() {
+/*function validateForm() {
    
     let form = document.querySelector('.contact_form')
     let name = document.forms["myForm"]["Name"].value;
@@ -27,7 +27,7 @@ function validateForm() {
     if(name=="" || email=="" || msg==""){
         return false;
     }
-}
+}*/
 
 function openForm(){
     document.getElementById("myFormcontainer").style.display = "block";
@@ -37,20 +37,7 @@ function closeForm(){
     document.getElementById("myFormcontainer").style.display = "none";
 }
 
-function SendMail() {
-    
-    var params = {
-        from_name : document.getElementById("Name").value,
-        email_id : document.getElementById("Email").value,
-        phone_number : document.getElementById("Phone"),
-        message : document.getElementById("Message").vale
-    }
-    emailjs.send("service_auzqu2f", "template_yy1rqpg", parms).then(function(res){
-        alert("Success!" + res.status);
-    }, function(error){
-        console.log('FAILED...',error);
-    })
-}
+
 
 
 
