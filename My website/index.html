@@ -20,7 +20,32 @@
     
     <!--JavaScript being defered to the end-->
     <script src="./JS/main.js" defer></script>
-    
+
+    <!-- load our EmailJS SDK-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('IBPGKnHIq48UcTLul');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_auzqu2f', 'template_yy1rqpg', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
     
     <!-- Title-->
     <title>Phillip Boswell</title>
@@ -28,7 +53,7 @@
 <body> 
     <div></div>
 
-    <!--Nav Bar-->
+    <!--Nav Bar--> 
     <div class="navBar">
         
             <a class="navText active" href="#heroic">Home</a>
@@ -133,15 +158,15 @@
     <!--Contact section-->
     <button class="open-button" onclick="openForm()">CONTACT ME</button>
     <div class="formContainer" id="myFormcontainer">
-        <form class="contact_form" action="" method="post" name="myForm" onsubmit="return validateForm()"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+        <form id="contact-form" name="myForm"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
             <input type="text" id="Name" placeholder="First Name">
             <p id="NameError"> </p>
             <input type="text" id="Email" name="Email" placeholder="Email">
             <p id="EmailError"> </p>
             <input type="text" id="Phone" name="phoneNumer" placeholder="Phone number">
             <p id="PhoneError"> </p>
-            <input type="text" id="Message" name="Message" placeholder="Please write your message here" style="height: 100px;">
-            <button type="submit" class="btn submit" onclick="sendMesg()">Send</button>
+            <input type="text" id="Message" name="Message" placeholder="Message" style="height: 100px;">
+            <button type="submit" class="btn submit" onclick = "SendMail()">SUBMIT</button>
             <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
         </form>
         
@@ -194,8 +219,6 @@
             <p class="center">Phillip Boswell <br> phillip.boswell.job@gmail.com <br> My <a href="https://brokenbonds.itch.io/">itich.io</a> </p>
             <br>
     </footer>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
 

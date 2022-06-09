@@ -447,7 +447,7 @@ input[type=text]:focus{
 }
 
 /* Submit button */
-.btn[type=submit],.btn {
+input[type=submit],.btn {
     background-color: #00C1C1; /* Sets the background color of the submit button to black */
     color: white; /* Sets the font color of the Submit button to white */
     font-weight: bold; /* Makes the font of the submit button bold */
@@ -470,7 +470,7 @@ input[type=text]:focus{
 }
 
 /* Hover effect for submit button */
-.btn[type=submit]:hover {
+input[type=submit]:hover {
     background-color: #006262; /* Turns the background of the submit button white when the user hovers over it */
     color: white; /* Turns the font black when hovered over */
 }

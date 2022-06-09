@@ -1,6 +1,7 @@
 function validateForm() {
-    const form = document.querySelector('.contact_form')
-    const name = document.forms["myForm"]["Name"].value;
+   
+    let form = document.querySelector('.contact_form')
+    let name = document.forms["myForm"]["Name"].value;
     let email = document.forms ["myForm"]["Email"].value;
     let msg = document.forms ["myForm"]["Phone"].value;
 
@@ -35,23 +36,25 @@ function openForm(){
 function closeForm(){
     document.getElementById("myFormcontainer").style.display = "none";
 }
-//function to send email.
-function sendMesg(e){
-    e.preventDefault();
 
-    Email.send({
-        SecureToken : "b8ff57e3-8e14-48ee-93b7-c16a5be89c6c",
-        To : 'phillip.boswell.job@gmail.com',
-        From : email.value,
-        Subject : "Job Email",
-        Body : msg.value
-    }).then(
-      message => alert(message)
-    );
+function SendMail() {
+    
+    var params = {
+        from_name : document.getElementById("Name").value,
+        email_id : document.getElementById("Email").value,
+        phone_number : document.getElementById("Phone"),
+        message : document.getElementById("Message").vale
+    }
+    emailjs.send("service_auzqu2f", "template_yy1rqpg", parms).then(function(res){
+        alert("Success!" + res.status);
+    }, function(error){
+        console.log('FAILED...',error);
+    })
 }
 
-form.addEventListener('submit', sendMesg);
 
+
+//this is the slide
 $("#slideshow > div:gt(0)").hide();
 
 setInterval(function(){
