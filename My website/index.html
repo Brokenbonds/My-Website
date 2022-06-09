@@ -21,6 +21,7 @@
     <!--JavaScript being defered to the end-->
     <script src="./JS/main.js" defer></script>
     
+    
     <!-- Title-->
     <title>Phillip Boswell</title>
 </head>
@@ -144,7 +145,7 @@
                 <p id="PhoneError"> </p>
             <label>Message:</label>
                 <input type="text" id="Message" name="Message" placeholder="Please write your message here" style="height: 100px;">
-            <input type="submit" value="SUBMIT">
+            <button type="submit" class="btn submit" onclick="sendMesg()">Send</button>
             <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
         </form>
         
@@ -194,9 +195,11 @@
 
     <!--Footer section-->
     <footer>
-            <p class="center">Phillip Boswell <br> phillip.boswell@gmail.com <br> My <a href="https://brokenbonds.itch.io/">itich.io</a> </p>
+            <p class="center">Phillip Boswell <br> phillip.boswell.job@gmail.com <br> My <a href="https://brokenbonds.itch.io/">itich.io</a> </p>
             <br>
     </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
 
