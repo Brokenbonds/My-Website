@@ -31,8 +31,6 @@
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
                 emailjs.sendForm('service_auzqu2f', 'template_yy1rqpg', this)
                     .then(function() {
@@ -156,20 +154,19 @@
 
 
     <!--Contact section-->
-    </button class="open-button" onclick="openForm()">CONTACT ME</button>
+    <button class="open-button" onclick="openForm()">CONTACT ME</button>
     <div class="formContainer" id="myFormcontainer">
-        <form id="contact-form">
-        <input type="hidden" name="contact_number">
-        <label>Name</label>
-        <input type="text" name="from_name">
-        <label>Email</label>
-        <input type="email" name="email_id">
-        <label>Phone Number</label>
-        <input type="tel" name="phone_number">
-        <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send">
-        <button type="close" onclick="closeForm()">close</button>
+        <form id="contact-form"  onsubmit="return validateForm()" name="myForm" method="post" action="" >
+            <label>Name</label>
+            <input type="text" name="from_name" rows ="1" style="height: 25px;">
+            <label>Email</label>
+            <input type="text" name="email_id" style="height: 25px;"><br>
+            <label>Phone</label>
+            <input type="text" name="phone_number" style="height: 25px;"><br>
+            <label>Message</label>
+            <input type="text" name="message" style="height: 100px;"><br>
+            <input type="submit" value="SEND">
+            <button type="close" class="btn" onclick="closeForm()">CLOSE</button>
         </form>
         
     </div>
